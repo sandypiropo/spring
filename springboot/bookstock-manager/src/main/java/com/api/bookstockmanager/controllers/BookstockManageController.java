@@ -26,15 +26,15 @@ public class BookstockManageController {
 
     @PostMapping
     public ResponseEntity<Object> saveBookstock(@RequestBody @Valid BookstockManageDto bookstockManageDto) {
-       if(bookstockManageService.bookBorrowed(bookstockManageDto.getBooksName()) {
-            ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: The Book is been borrowed");
-        }
-        if(bookstockManageService.personReading(bookstockManageDto.getResponsibleName())){
-            return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: User is already borrowing a book");
-        }
-        if(bookstockManageService.existsAddress(bookstockManageDto.getResponsibleAddress())){
-            return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: address already registered");
-        }
+//       if(bookstockManageService.bookBorrowed(bookstockManageDto.getBooksName())); {
+//            ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: The Book is been borrowed");
+//        }
+//        if(bookstockManageService.personReading(bookstockManageDto.getResponsibleName())){
+//            return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: User is already borrowing a book");
+//        }
+//        if(bookstockManageService.existsAddress(bookstockManageDto.getResponsibleAddress())){
+//            return ResponseEntity.status(HttpStatus.CONFLICT).body("Conflict: address already registered");
+//        }
 
         var bookstockModel = new BookstockModel();
         BeanUtils.copyProperties(bookstockManageDto, bookstockModel);

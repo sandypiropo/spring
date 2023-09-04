@@ -20,7 +20,6 @@ public class BookstockManageService {
         return bookstockManageRepository.save(bookstockModel);
     }
 
-    public boolean //existisby?? (String booksName) {
-        return
-    }
+//    public boolean //existisby?? (String booksName) {
+//        return
 }
